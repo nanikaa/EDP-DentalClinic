@@ -1,4 +1,6 @@
-﻿Public Class home
+﻿Imports System.IO
+
+Public Class home
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles homeSearch_btn.Click
         With Me
             searchPatient.Show()
@@ -14,6 +16,12 @@
     Private Sub homeNewRecord_btn_Click(sender As Object, e As EventArgs) Handles homeNewRecord_btn.Click
         With Me
             addRecord.Show()
+        End With
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        With Me
+            viewUploadedData.Show()
         End With
     End Sub
 End Class

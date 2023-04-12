@@ -137,6 +137,12 @@
     <Compile Include="viewPatientRecords.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="viewUploadedData.Designer.vb">
+      <DependentUpon>viewUploadedData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="viewUploadedData.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="addPatient.resx">
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="viewPatientRecords.resx">
       <DependentUpon>viewPatientRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewUploadedData.resx">
+      <DependentUpon>viewUploadedData.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

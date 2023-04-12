@@ -25,31 +25,19 @@ Partial Class viewPatientInfo
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(viewPatientInfo))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.TextBox18 = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
@@ -86,7 +74,10 @@ Partial Class viewPatientInfo
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.view_Lastname = New System.Windows.Forms.Label()
+        Me.view_Firstname = New System.Windows.Forms.Label()
+        Me.view_PatientNumber = New System.Windows.Forms.Label()
+        Me.view_Sex = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,13 +104,6 @@ Partial Class viewPatientInfo
         Me.PictureBox1.Size = New System.Drawing.Size(211, 209)
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
-        '
-        'TextBox14
-        '
-        Me.TextBox14.Location = New System.Drawing.Point(415, 289)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(259, 20)
-        Me.TextBox14.TabIndex = 68
         '
         'Label16
         '
@@ -164,13 +148,6 @@ Partial Class viewPatientInfo
         Me.Label12.TabIndex = 64
         Me.Label12.Text = "E-mail Address"
         '
-        'TextBox10
-        '
-        Me.TextBox10.Location = New System.Drawing.Point(526, 203)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(148, 20)
-        Me.TextBox10.TabIndex = 63
-        '
         'Label11
         '
         Me.Label11.AutoSize = True
@@ -181,13 +158,6 @@ Partial Class viewPatientInfo
         Me.Label11.Size = New System.Drawing.Size(26, 17)
         Me.Label11.TabIndex = 62
         Me.Label11.Text = "Sex"
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(596, 117)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(78, 20)
-        Me.TextBox9.TabIndex = 61
         '
         'Label9
         '
@@ -211,20 +181,6 @@ Partial Class viewPatientInfo
         Me.Label10.TabIndex = 59
         Me.Label10.Text = "Occupation"
         '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(400, 246)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(274, 20)
-        Me.TextBox6.TabIndex = 58
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(277, 246)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(117, 20)
-        Me.TextBox8.TabIndex = 57
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -235,13 +191,6 @@ Partial Class viewPatientInfo
         Me.Label8.Size = New System.Drawing.Size(26, 17)
         Me.Label8.TabIndex = 56
         Me.Label8.Text = "Age"
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(619, 160)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(55, 20)
-        Me.TextBox7.TabIndex = 55
         '
         'Label6
         '
@@ -264,13 +213,6 @@ Partial Class viewPatientInfo
         Me.Label5.Size = New System.Drawing.Size(68, 17)
         Me.Label5.TabIndex = 53
         Me.Label5.Text = "Date of Birth"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(388, 203)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(132, 20)
-        Me.TextBox5.TabIndex = 52
         '
         'Label4
         '
@@ -304,41 +246,6 @@ Partial Class viewPatientInfo
         Me.Label1.Size = New System.Drawing.Size(58, 17)
         Me.Label1.TabIndex = 49
         Me.Label1.Text = "Last Name"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(277, 203)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(105, 20)
-        Me.TextBox4.TabIndex = 48
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(277, 160)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(336, 20)
-        Me.TextBox3.TabIndex = 47
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(385, 117)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(205, 20)
-        Me.TextBox2.TabIndex = 46
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(277, 117)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(102, 20)
-        Me.TextBox1.TabIndex = 45
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Location = New System.Drawing.Point(277, 289)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(132, 20)
-        Me.TextBox13.TabIndex = 70
         '
         'Label17
         '
@@ -713,12 +620,49 @@ Partial Class viewPatientInfo
         Me.Label25.TabIndex = 110
         Me.Label25.Text = "Patient ID Number:"
         '
-        'TextBox19
+        'view_Lastname
         '
-        Me.TextBox19.Location = New System.Drawing.Point(154, 289)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.Size = New System.Drawing.Size(98, 20)
-        Me.TextBox19.TabIndex = 109
+        Me.view_Lastname.AutoSize = True
+        Me.view_Lastname.BackColor = System.Drawing.Color.Transparent
+        Me.view_Lastname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.view_Lastname.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.view_Lastname.Location = New System.Drawing.Point(283, 114)
+        Me.view_Lastname.Name = "view_Lastname"
+        Me.view_Lastname.Size = New System.Drawing.Size(2, 15)
+        Me.view_Lastname.TabIndex = 111
+        '
+        'view_Firstname
+        '
+        Me.view_Firstname.AutoSize = True
+        Me.view_Firstname.BackColor = System.Drawing.Color.Transparent
+        Me.view_Firstname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.view_Firstname.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.view_Firstname.Location = New System.Drawing.Point(390, 114)
+        Me.view_Firstname.Name = "view_Firstname"
+        Me.view_Firstname.Size = New System.Drawing.Size(2, 15)
+        Me.view_Firstname.TabIndex = 112
+        '
+        'view_PatientNumber
+        '
+        Me.view_PatientNumber.AutoSize = True
+        Me.view_PatientNumber.BackColor = System.Drawing.Color.Transparent
+        Me.view_PatientNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.view_PatientNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.view_PatientNumber.Location = New System.Drawing.Point(163, 294)
+        Me.view_PatientNumber.Name = "view_PatientNumber"
+        Me.view_PatientNumber.Size = New System.Drawing.Size(2, 15)
+        Me.view_PatientNumber.TabIndex = 113
+        '
+        'view_Sex
+        '
+        Me.view_Sex.AutoSize = True
+        Me.view_Sex.BackColor = System.Drawing.Color.Transparent
+        Me.view_Sex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.view_Sex.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.view_Sex.Location = New System.Drawing.Point(603, 114)
+        Me.view_Sex.Name = "view_Sex"
+        Me.view_Sex.Size = New System.Drawing.Size(2, 15)
+        Me.view_Sex.TabIndex = 114
         '
         'viewPatientInfo
         '
@@ -727,8 +671,11 @@ Partial Class viewPatientInfo
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(720, 677)
+        Me.Controls.Add(Me.view_Sex)
+        Me.Controls.Add(Me.view_PatientNumber)
+        Me.Controls.Add(Me.view_Firstname)
+        Me.Controls.Add(Me.view_Lastname)
         Me.Controls.Add(Me.Label25)
-        Me.Controls.Add(Me.TextBox19)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox18)
         Me.Controls.Add(Me.Label26)
@@ -763,32 +710,20 @@ Partial Class viewPatientInfo
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox13)
         Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.TextBox14)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.TextBox10)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.TextBox9)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
@@ -805,31 +740,19 @@ Partial Class viewPatientInfo
 
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox14 As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox10 As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox8 As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox7 As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox13 As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents TextBox18 As TextBox
     Friend WithEvents Label26 As Label
@@ -866,5 +789,8 @@ Partial Class viewPatientInfo
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label25 As Label
-    Friend WithEvents TextBox19 As TextBox
+    Friend WithEvents view_Lastname As Label
+    Friend WithEvents view_Firstname As Label
+    Friend WithEvents view_PatientNumber As Label
+    Friend WithEvents view_Sex As Label
 End Class

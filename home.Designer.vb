@@ -27,6 +27,9 @@ Partial Class home
         Me.homeNewPatient_btn = New System.Windows.Forms.Button()
         Me.homeSearch_btn = New System.Windows.Forms.Button()
         Me.homeNewRecord_btn = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -37,7 +40,7 @@ Partial Class home
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Location = New System.Drawing.Point(28, 23)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(206, 208)
+        Me.PictureBox1.Size = New System.Drawing.Size(247, 242)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
@@ -47,7 +50,7 @@ Partial Class home
         Me.homeNewPatient_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.homeNewPatient_btn.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.homeNewPatient_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.homeNewPatient_btn.Location = New System.Drawing.Point(281, 112)
+        Me.homeNewPatient_btn.Location = New System.Drawing.Point(311, 88)
         Me.homeNewPatient_btn.Name = "homeNewPatient_btn"
         Me.homeNewPatient_btn.Size = New System.Drawing.Size(207, 31)
         Me.homeNewPatient_btn.TabIndex = 40
@@ -60,7 +63,7 @@ Partial Class home
         Me.homeSearch_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.homeSearch_btn.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.homeSearch_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.homeSearch_btn.Location = New System.Drawing.Point(281, 66)
+        Me.homeSearch_btn.Location = New System.Drawing.Point(311, 42)
         Me.homeSearch_btn.Name = "homeSearch_btn"
         Me.homeSearch_btn.Size = New System.Drawing.Size(207, 31)
         Me.homeSearch_btn.TabIndex = 39
@@ -73,12 +76,42 @@ Partial Class home
         Me.homeNewRecord_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.homeNewRecord_btn.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.homeNewRecord_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.homeNewRecord_btn.Location = New System.Drawing.Point(281, 157)
+        Me.homeNewRecord_btn.Location = New System.Drawing.Point(311, 133)
         Me.homeNewRecord_btn.Name = "homeNewRecord_btn"
         Me.homeNewRecord_btn.Size = New System.Drawing.Size(207, 31)
         Me.homeNewRecord_btn.TabIndex = 41
         Me.homeNewRecord_btn.Text = "New Patient Record"
         Me.homeNewRecord_btn.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.HotPink
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button1.Location = New System.Drawing.Point(311, 178)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(207, 31)
+        Me.Button1.TabIndex = 42
+        Me.Button1.Text = "Upload Data"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.HotPink
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button2.Location = New System.Drawing.Point(311, 222)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(207, 31)
+        Me.Button2.TabIndex = 43
+        Me.Button2.Text = "Backup Data"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'home
         '
@@ -86,7 +119,9 @@ Partial Class home
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(543, 259)
+        Me.ClientSize = New System.Drawing.Size(577, 299)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.homeNewRecord_btn)
         Me.Controls.Add(Me.homeNewPatient_btn)
         Me.Controls.Add(Me.homeSearch_btn)
@@ -106,4 +141,7 @@ Partial Class home
     Friend WithEvents homeNewPatient_btn As Button
     Friend WithEvents homeSearch_btn As Button
     Friend WithEvents homeNewRecord_btn As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Button2 As Button
 End Class
