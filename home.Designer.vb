@@ -27,9 +27,9 @@ Partial Class home
         Me.homeNewPatient_btn = New System.Windows.Forms.Button()
         Me.homeSearch_btn = New System.Windows.Forms.Button()
         Me.homeNewRecord_btn = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnUploadData = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnBackUp_DB = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -83,35 +83,35 @@ Partial Class home
         Me.homeNewRecord_btn.Text = "New Patient Record"
         Me.homeNewRecord_btn.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnUploadData
         '
-        Me.Button1.BackColor = System.Drawing.Color.HotPink
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(311, 178)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(207, 31)
-        Me.Button1.TabIndex = 42
-        Me.Button1.Text = "Upload Data"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnUploadData.BackColor = System.Drawing.Color.HotPink
+        Me.btnUploadData.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnUploadData.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUploadData.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnUploadData.Location = New System.Drawing.Point(311, 178)
+        Me.btnUploadData.Name = "btnUploadData"
+        Me.btnUploadData.Size = New System.Drawing.Size(207, 31)
+        Me.btnUploadData.TabIndex = 42
+        Me.btnUploadData.Text = "Upload Data"
+        Me.btnUploadData.UseVisualStyleBackColor = False
         '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'Button2
+        'btnBackUp_DB
         '
-        Me.Button2.BackColor = System.Drawing.Color.HotPink
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button2.Location = New System.Drawing.Point(311, 222)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(207, 31)
-        Me.Button2.TabIndex = 43
-        Me.Button2.Text = "Backup Data"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnBackUp_DB.BackColor = System.Drawing.Color.HotPink
+        Me.btnBackUp_DB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnBackUp_DB.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBackUp_DB.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnBackUp_DB.Location = New System.Drawing.Point(311, 222)
+        Me.btnBackUp_DB.Name = "btnBackUp_DB"
+        Me.btnBackUp_DB.Size = New System.Drawing.Size(207, 31)
+        Me.btnBackUp_DB.TabIndex = 43
+        Me.btnBackUp_DB.Text = "Backup Data"
+        Me.btnBackUp_DB.UseVisualStyleBackColor = False
         '
         'home
         '
@@ -120,8 +120,8 @@ Partial Class home
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(577, 299)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnBackUp_DB)
+        Me.Controls.Add(Me.btnUploadData)
         Me.Controls.Add(Me.homeNewRecord_btn)
         Me.Controls.Add(Me.homeNewPatient_btn)
         Me.Controls.Add(Me.homeSearch_btn)
@@ -141,7 +141,7 @@ Partial Class home
     Friend WithEvents homeNewPatient_btn As Button
     Friend WithEvents homeSearch_btn As Button
     Friend WithEvents homeNewRecord_btn As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnUploadData As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnBackUp_DB As Button
 End Class

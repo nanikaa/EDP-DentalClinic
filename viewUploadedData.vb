@@ -15,7 +15,7 @@ Public Class viewUploadedData
         dt.Columns.Add("Balance", GetType(String))
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btnSelectFile_Click(sender As Object, e As EventArgs) Handles btnSelectFile.Click
         Dim fName As String = ""
         OpenFileDialog1.InitialDirectory = "C:\sample"
         OpenFileDialog1.Filter = "CSV files(*.csv)|*.csv"
