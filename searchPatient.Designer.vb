@@ -23,12 +23,12 @@ Partial Class searchPatient
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(searchPatient))
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_searchPatient = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtBox_PatientID = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.pass_txtBox = New System.Windows.Forms.TextBox()
-        Me.usrName_txtBox = New System.Windows.Forms.TextBox()
+        Me.txtBox_PatientLName = New System.Windows.Forms.TextBox()
+        Me.txtBox_PatientFName = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -37,17 +37,17 @@ Partial Class searchPatient
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'btn_searchPatient
         '
-        Me.Button1.BackColor = System.Drawing.Color.PaleTurquoise
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(100, 221)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(86, 31)
-        Me.Button1.TabIndex = 33
-        Me.Button1.Text = "Go"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_searchPatient.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.btn_searchPatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_searchPatient.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_searchPatient.Location = New System.Drawing.Point(100, 221)
+        Me.btn_searchPatient.Name = "btn_searchPatient"
+        Me.btn_searchPatient.Size = New System.Drawing.Size(86, 31)
+        Me.btn_searchPatient.TabIndex = 33
+        Me.btn_searchPatient.Text = "Go"
+        Me.btn_searchPatient.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -60,12 +60,12 @@ Partial Class searchPatient
         Me.Label3.TabIndex = 32
         Me.Label3.Text = "Patient ID Number:"
         '
-        'TextBox1
+        'txtBox_PatientID
         '
-        Me.TextBox1.Location = New System.Drawing.Point(45, 94)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox1.TabIndex = 31
+        Me.txtBox_PatientID.Location = New System.Drawing.Point(45, 94)
+        Me.txtBox_PatientID.Name = "txtBox_PatientID"
+        Me.txtBox_PatientID.Size = New System.Drawing.Size(200, 20)
+        Me.txtBox_PatientID.TabIndex = 31
         '
         'Label1
         '
@@ -78,19 +78,19 @@ Partial Class searchPatient
         Me.Label1.TabIndex = 30
         Me.Label1.Text = "First Name:"
         '
-        'pass_txtBox
+        'txtBox_PatientLName
         '
-        Me.pass_txtBox.Location = New System.Drawing.Point(44, 177)
-        Me.pass_txtBox.Name = "pass_txtBox"
-        Me.pass_txtBox.Size = New System.Drawing.Size(200, 20)
-        Me.pass_txtBox.TabIndex = 29
+        Me.txtBox_PatientLName.Location = New System.Drawing.Point(44, 177)
+        Me.txtBox_PatientLName.Name = "txtBox_PatientLName"
+        Me.txtBox_PatientLName.Size = New System.Drawing.Size(200, 20)
+        Me.txtBox_PatientLName.TabIndex = 29
         '
-        'usrName_txtBox
+        'txtBox_PatientFName
         '
-        Me.usrName_txtBox.Location = New System.Drawing.Point(45, 135)
-        Me.usrName_txtBox.Name = "usrName_txtBox"
-        Me.usrName_txtBox.Size = New System.Drawing.Size(200, 20)
-        Me.usrName_txtBox.TabIndex = 28
+        Me.txtBox_PatientFName.Location = New System.Drawing.Point(45, 135)
+        Me.txtBox_PatientFName.Name = "txtBox_PatientFName"
+        Me.txtBox_PatientFName.Size = New System.Drawing.Size(200, 20)
+        Me.txtBox_PatientFName.TabIndex = 28
         '
         'PictureBox1
         '
@@ -164,12 +164,12 @@ Partial Class searchPatient
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btn_searchPatient)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtBox_PatientID)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.pass_txtBox)
-        Me.Controls.Add(Me.usrName_txtBox)
+        Me.Controls.Add(Me.txtBox_PatientLName)
+        Me.Controls.Add(Me.txtBox_PatientFName)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -181,12 +181,12 @@ Partial Class searchPatient
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_searchPatient As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtBox_PatientID As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents pass_txtBox As TextBox
-    Friend WithEvents usrName_txtBox As TextBox
+    Friend WithEvents txtBox_PatientLName As TextBox
+    Friend WithEvents txtBox_PatientFName As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label

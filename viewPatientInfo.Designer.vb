@@ -71,13 +71,22 @@ Partial Class viewPatientInfo
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btn_Update = New System.Windows.Forms.Button()
+        Me.btn_Delete = New System.Windows.Forms.Button()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.view_Lastname = New System.Windows.Forms.Label()
-        Me.view_Firstname = New System.Windows.Forms.Label()
-        Me.view_PatientNumber = New System.Windows.Forms.Label()
-        Me.view_Sex = New System.Windows.Forms.Label()
+        Me.txtBox_LastName = New System.Windows.Forms.TextBox()
+        Me.txtBox_FirstName = New System.Windows.Forms.TextBox()
+        Me.txtBox_Sex = New System.Windows.Forms.TextBox()
+        Me.txtBox_Age = New System.Windows.Forms.TextBox()
+        Me.txtBox_Occupation = New System.Windows.Forms.TextBox()
+        Me.txtBox_Address = New System.Windows.Forms.TextBox()
+        Me.txtBox_Birthday = New System.Windows.Forms.TextBox()
+        Me.txtBox_ContactNum = New System.Windows.Forms.TextBox()
+        Me.txtBox_Email = New System.Windows.Forms.TextBox()
+        Me.txtBox_ContactPerson = New System.Windows.Forms.TextBox()
+        Me.txtBox_LastVisit = New System.Windows.Forms.TextBox()
+        Me.txtBox_PrevDentist = New System.Windows.Forms.TextBox()
+        Me.label_PatientID = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,7 +110,7 @@ Partial Class viewPatientInfo
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Location = New System.Drawing.Point(41, 74)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(211, 209)
+        Me.PictureBox1.Size = New System.Drawing.Size(224, 220)
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
@@ -110,11 +119,11 @@ Partial Class viewPatientInfo
         Me.Label16.AutoSize = True
         Me.Label16.BackColor = System.Drawing.Color.Transparent
         Me.Label16.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(412, 269)
+        Me.Label16.Location = New System.Drawing.Point(274, 277)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(212, 17)
+        Me.Label16.Size = New System.Drawing.Size(181, 17)
         Me.Label16.TabIndex = 67
-        Me.Label16.Text = "Previous Dentist's Name/Contact Number:"
+        Me.Label16.Text = "Previous Dentist's Name/Contact #:"
         '
         'Label13
         '
@@ -142,7 +151,7 @@ Partial Class viewPatientInfo
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!)
-        Me.Label12.Location = New System.Drawing.Point(523, 184)
+        Me.Label12.Location = New System.Drawing.Point(524, 181)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(79, 17)
         Me.Label12.TabIndex = 64
@@ -153,7 +162,7 @@ Partial Class viewPatientInfo
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!)
-        Me.Label11.Location = New System.Drawing.Point(593, 97)
+        Me.Label11.Location = New System.Drawing.Point(559, 92)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(26, 17)
         Me.Label11.TabIndex = 62
@@ -164,7 +173,7 @@ Partial Class viewPatientInfo
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(397, 226)
+        Me.Label9.Location = New System.Drawing.Point(274, 226)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(232, 17)
         Me.Label9.TabIndex = 60
@@ -175,7 +184,7 @@ Partial Class viewPatientInfo
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(274, 226)
+        Me.Label10.Location = New System.Drawing.Point(559, 135)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(62, 17)
         Me.Label10.TabIndex = 59
@@ -186,7 +195,7 @@ Partial Class viewPatientInfo
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!)
-        Me.Label8.Location = New System.Drawing.Point(616, 140)
+        Me.Label8.Location = New System.Drawing.Point(634, 92)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(26, 17)
         Me.Label8.TabIndex = 56
@@ -197,7 +206,7 @@ Partial Class viewPatientInfo
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!)
-        Me.Label6.Location = New System.Drawing.Point(385, 184)
+        Me.Label6.Location = New System.Drawing.Point(385, 181)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(86, 17)
         Me.Label6.TabIndex = 54
@@ -208,7 +217,7 @@ Partial Class viewPatientInfo
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!)
-        Me.Label5.Location = New System.Drawing.Point(274, 184)
+        Me.Label5.Location = New System.Drawing.Point(277, 181)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(68, 17)
         Me.Label5.TabIndex = 53
@@ -219,7 +228,7 @@ Partial Class viewPatientInfo
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!)
-        Me.Label4.Location = New System.Drawing.Point(274, 140)
+        Me.Label4.Location = New System.Drawing.Point(274, 135)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(95, 17)
         Me.Label4.TabIndex = 51
@@ -230,7 +239,7 @@ Partial Class viewPatientInfo
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(382, 97)
+        Me.Label3.Location = New System.Drawing.Point(385, 92)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(60, 17)
         Me.Label3.TabIndex = 50
@@ -241,7 +250,7 @@ Partial Class viewPatientInfo
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(274, 97)
+        Me.Label1.Location = New System.Drawing.Point(274, 92)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 17)
         Me.Label1.TabIndex = 49
@@ -252,7 +261,7 @@ Partial Class viewPatientInfo
         Me.Label17.AutoSize = True
         Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(274, 269)
+        Me.Label17.Location = New System.Drawing.Point(556, 226)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(124, 17)
         Me.Label17.TabIndex = 69
@@ -585,84 +594,136 @@ Partial Class viewPatientInfo
         Me.PictureBox2.TabIndex = 76
         Me.PictureBox2.TabStop = False
         '
-        'Button1
+        'btn_Update
         '
-        Me.Button1.BackColor = System.Drawing.Color.PaleTurquoise
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(496, 614)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(86, 31)
-        Me.Button1.TabIndex = 75
-        Me.Button1.Text = "Edit"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_Update.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_Update.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_Update.Location = New System.Drawing.Point(496, 614)
+        Me.btn_Update.Name = "btn_Update"
+        Me.btn_Update.Size = New System.Drawing.Size(86, 31)
+        Me.btn_Update.TabIndex = 75
+        Me.btn_Update.Text = "Update"
+        Me.btn_Update.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btn_Delete
         '
-        Me.Button2.BackColor = System.Drawing.Color.Red
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(588, 614)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(86, 31)
-        Me.Button2.TabIndex = 108
-        Me.Button2.Text = "Delete"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btn_Delete.BackColor = System.Drawing.Color.Red
+        Me.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_Delete.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_Delete.Location = New System.Drawing.Point(588, 614)
+        Me.btn_Delete.Name = "btn_Delete"
+        Me.btn_Delete.Size = New System.Drawing.Size(86, 31)
+        Me.btn_Delete.TabIndex = 108
+        Me.btn_Delete.Text = "Delete"
+        Me.btn_Delete.UseVisualStyleBackColor = False
         '
         'Label25
         '
         Me.Label25.AutoSize = True
         Me.Label25.BackColor = System.Drawing.Color.Transparent
         Me.Label25.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(37, 289)
+        Me.Label25.Location = New System.Drawing.Point(37, 311)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(120, 21)
         Me.Label25.TabIndex = 110
         Me.Label25.Text = "Patient ID Number:"
         '
-        'view_Lastname
+        'txtBox_LastName
         '
-        Me.view_Lastname.AutoSize = True
-        Me.view_Lastname.BackColor = System.Drawing.Color.Transparent
-        Me.view_Lastname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.view_Lastname.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.view_Lastname.Location = New System.Drawing.Point(283, 114)
-        Me.view_Lastname.Name = "view_Lastname"
-        Me.view_Lastname.Size = New System.Drawing.Size(2, 15)
-        Me.view_Lastname.TabIndex = 111
+        Me.txtBox_LastName.Location = New System.Drawing.Point(277, 109)
+        Me.txtBox_LastName.Name = "txtBox_LastName"
+        Me.txtBox_LastName.Size = New System.Drawing.Size(100, 20)
+        Me.txtBox_LastName.TabIndex = 117
         '
-        'view_Firstname
+        'txtBox_FirstName
         '
-        Me.view_Firstname.AutoSize = True
-        Me.view_Firstname.BackColor = System.Drawing.Color.Transparent
-        Me.view_Firstname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.view_Firstname.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.view_Firstname.Location = New System.Drawing.Point(390, 114)
-        Me.view_Firstname.Name = "view_Firstname"
-        Me.view_Firstname.Size = New System.Drawing.Size(2, 15)
-        Me.view_Firstname.TabIndex = 112
+        Me.txtBox_FirstName.Location = New System.Drawing.Point(388, 109)
+        Me.txtBox_FirstName.Name = "txtBox_FirstName"
+        Me.txtBox_FirstName.Size = New System.Drawing.Size(166, 20)
+        Me.txtBox_FirstName.TabIndex = 118
         '
-        'view_PatientNumber
+        'txtBox_Sex
         '
-        Me.view_PatientNumber.AutoSize = True
-        Me.view_PatientNumber.BackColor = System.Drawing.Color.Transparent
-        Me.view_PatientNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.view_PatientNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.view_PatientNumber.Location = New System.Drawing.Point(163, 294)
-        Me.view_PatientNumber.Name = "view_PatientNumber"
-        Me.view_PatientNumber.Size = New System.Drawing.Size(2, 15)
-        Me.view_PatientNumber.TabIndex = 113
+        Me.txtBox_Sex.Location = New System.Drawing.Point(560, 109)
+        Me.txtBox_Sex.Name = "txtBox_Sex"
+        Me.txtBox_Sex.Size = New System.Drawing.Size(68, 20)
+        Me.txtBox_Sex.TabIndex = 119
         '
-        'view_Sex
+        'txtBox_Age
         '
-        Me.view_Sex.AutoSize = True
-        Me.view_Sex.BackColor = System.Drawing.Color.Transparent
-        Me.view_Sex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.view_Sex.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.view_Sex.Location = New System.Drawing.Point(603, 114)
-        Me.view_Sex.Name = "view_Sex"
-        Me.view_Sex.Size = New System.Drawing.Size(2, 15)
-        Me.view_Sex.TabIndex = 114
+        Me.txtBox_Age.Location = New System.Drawing.Point(637, 109)
+        Me.txtBox_Age.Name = "txtBox_Age"
+        Me.txtBox_Age.Size = New System.Drawing.Size(37, 20)
+        Me.txtBox_Age.TabIndex = 120
+        '
+        'txtBox_Occupation
+        '
+        Me.txtBox_Occupation.Location = New System.Drawing.Point(559, 153)
+        Me.txtBox_Occupation.Name = "txtBox_Occupation"
+        Me.txtBox_Occupation.Size = New System.Drawing.Size(115, 20)
+        Me.txtBox_Occupation.TabIndex = 121
+        '
+        'txtBox_Address
+        '
+        Me.txtBox_Address.Location = New System.Drawing.Point(277, 153)
+        Me.txtBox_Address.Name = "txtBox_Address"
+        Me.txtBox_Address.Size = New System.Drawing.Size(276, 20)
+        Me.txtBox_Address.TabIndex = 122
+        '
+        'txtBox_Birthday
+        '
+        Me.txtBox_Birthday.Location = New System.Drawing.Point(277, 199)
+        Me.txtBox_Birthday.Name = "txtBox_Birthday"
+        Me.txtBox_Birthday.Size = New System.Drawing.Size(100, 20)
+        Me.txtBox_Birthday.TabIndex = 123
+        '
+        'txtBox_ContactNum
+        '
+        Me.txtBox_ContactNum.Location = New System.Drawing.Point(388, 199)
+        Me.txtBox_ContactNum.Name = "txtBox_ContactNum"
+        Me.txtBox_ContactNum.Size = New System.Drawing.Size(128, 20)
+        Me.txtBox_ContactNum.TabIndex = 124
+        '
+        'txtBox_Email
+        '
+        Me.txtBox_Email.Location = New System.Drawing.Point(527, 199)
+        Me.txtBox_Email.Name = "txtBox_Email"
+        Me.txtBox_Email.Size = New System.Drawing.Size(147, 20)
+        Me.txtBox_Email.TabIndex = 125
+        '
+        'txtBox_ContactPerson
+        '
+        Me.txtBox_ContactPerson.Location = New System.Drawing.Point(277, 244)
+        Me.txtBox_ContactPerson.Name = "txtBox_ContactPerson"
+        Me.txtBox_ContactPerson.Size = New System.Drawing.Size(271, 20)
+        Me.txtBox_ContactPerson.TabIndex = 126
+        '
+        'txtBox_LastVisit
+        '
+        Me.txtBox_LastVisit.Location = New System.Drawing.Point(559, 244)
+        Me.txtBox_LastVisit.Name = "txtBox_LastVisit"
+        Me.txtBox_LastVisit.Size = New System.Drawing.Size(115, 20)
+        Me.txtBox_LastVisit.TabIndex = 127
+        '
+        'txtBox_PrevDentist
+        '
+        Me.txtBox_PrevDentist.Location = New System.Drawing.Point(461, 276)
+        Me.txtBox_PrevDentist.Name = "txtBox_PrevDentist"
+        Me.txtBox_PrevDentist.Size = New System.Drawing.Size(213, 20)
+        Me.txtBox_PrevDentist.TabIndex = 128
+        '
+        'label_PatientID
+        '
+        Me.label_PatientID.AutoSize = True
+        Me.label_PatientID.BackColor = System.Drawing.Color.Transparent
+        Me.label_PatientID.Font = New System.Drawing.Font("Cascadia Mono", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_PatientID.ForeColor = System.Drawing.Color.HotPink
+        Me.label_PatientID.Location = New System.Drawing.Point(153, 302)
+        Me.label_PatientID.Name = "label_PatientID"
+        Me.label_PatientID.Size = New System.Drawing.Size(57, 32)
+        Me.label_PatientID.TabIndex = 129
+        Me.label_PatientID.Text = "000"
         '
         'viewPatientInfo
         '
@@ -671,12 +732,21 @@ Partial Class viewPatientInfo
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(720, 677)
-        Me.Controls.Add(Me.view_Sex)
-        Me.Controls.Add(Me.view_PatientNumber)
-        Me.Controls.Add(Me.view_Firstname)
-        Me.Controls.Add(Me.view_Lastname)
+        Me.Controls.Add(Me.label_PatientID)
+        Me.Controls.Add(Me.txtBox_PrevDentist)
+        Me.Controls.Add(Me.txtBox_LastVisit)
+        Me.Controls.Add(Me.txtBox_ContactPerson)
+        Me.Controls.Add(Me.txtBox_Email)
+        Me.Controls.Add(Me.txtBox_ContactNum)
+        Me.Controls.Add(Me.txtBox_Birthday)
+        Me.Controls.Add(Me.txtBox_Address)
+        Me.Controls.Add(Me.txtBox_Occupation)
+        Me.Controls.Add(Me.txtBox_Age)
+        Me.Controls.Add(Me.txtBox_Sex)
+        Me.Controls.Add(Me.txtBox_FirstName)
+        Me.Controls.Add(Me.txtBox_LastName)
         Me.Controls.Add(Me.Label25)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btn_Delete)
         Me.Controls.Add(Me.TextBox18)
         Me.Controls.Add(Me.Label26)
         Me.Controls.Add(Me.CheckBox12)
@@ -709,7 +779,7 @@ Partial Class viewPatientInfo
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btn_Update)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label13)
@@ -786,11 +856,20 @@ Partial Class viewPatientInfo
     Friend WithEvents Label15 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btn_Update As Button
+    Friend WithEvents btn_Delete As Button
     Friend WithEvents Label25 As Label
-    Friend WithEvents view_Lastname As Label
-    Friend WithEvents view_Firstname As Label
-    Friend WithEvents view_PatientNumber As Label
-    Friend WithEvents view_Sex As Label
+    Friend WithEvents txtBox_LastName As TextBox
+    Friend WithEvents txtBox_FirstName As TextBox
+    Friend WithEvents txtBox_Sex As TextBox
+    Friend WithEvents txtBox_Age As TextBox
+    Friend WithEvents txtBox_Occupation As TextBox
+    Friend WithEvents txtBox_Address As TextBox
+    Friend WithEvents txtBox_Birthday As TextBox
+    Friend WithEvents txtBox_ContactNum As TextBox
+    Friend WithEvents txtBox_Email As TextBox
+    Friend WithEvents txtBox_ContactPerson As TextBox
+    Friend WithEvents txtBox_LastVisit As TextBox
+    Friend WithEvents txtBox_PrevDentist As TextBox
+    Friend WithEvents label_PatientID As Label
 End Class
