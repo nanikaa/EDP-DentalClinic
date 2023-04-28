@@ -15,7 +15,7 @@ Public Class viewPatientInfo
             Dim myreader As MySqlDataReader
 
 
-            strSQL = "Select patient_id, patient_firstName, patient_lastName, patient_address, patient_age from patients where patient_id = '" _
+            strSQL = "Select patient_lastName, patient_firstName, patient_address, patient_age from patients where patient_id = '" _
                     & .label_PatientID.Text & "'"
             'MsgBox(strSQL)
             mycmd.CommandText = strSQL
@@ -24,10 +24,10 @@ Public Class viewPatientInfo
             If myreader.HasRows Then
                 While myreader.Read()
                     '.txtBox_PatientID.Text = myreader.GetString(0)
-                    .txtBox_LastName.Text = myreader.GetString(1)
-                    .txtBox_FirstName.Text = myreader.GetString(2)
-                    .txtBox_Address.Text = myreader.GetString(3)
-                    .txtBox_Age.Text = myreader.GetString(4)
+                    .txtBox_LastName.Text = myreader.GetString(0)
+                    .txtBox_FirstName.Text = myreader.GetString(1)
+                    .txtBox_Address.Text = myreader.GetString(2)
+                    .txtBox_Age.Text = myreader.GetString(3)
                 End While
             Else
                 MsgBox("Patient Number does not exists!")
@@ -41,11 +41,11 @@ Public Class viewPatientInfo
             Call Connect_to_DB()
             Dim mycmd As New MySqlCommand
             Try
-                strSQL = "Update patients set patient_firstName, patient_lastName, patient_address, patient_age = '" _
-                & .txtBox_FirstName.Text & "', '" _
-                & .txtBox_LastName.Text & "','" _
-                & .txtBox_Address.Text & "','" _
-                & .txtBox_Age.Text & "', where patient_id = '" _
+                strSQL = "Update patients set patient_age = '" _
+                & .txtBox_Age.Text & "', patient_address = '" _
+                & .txtBox_Address.Text & "', patient_lastName = '" _
+                & .txtBox_LastName.Text & "', patient_firstName = '" _
+                & .txtBox_FirstName.Text & "' where patient_id = '" _
                 & .label_PatientID.Text & "'"
 
                 mycmd.CommandText = strSQL

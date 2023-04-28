@@ -239,7 +239,7 @@ Partial Class viewPatientInfo
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(385, 92)
+        Me.Label3.Location = New System.Drawing.Point(400, 92)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(60, 17)
         Me.Label3.TabIndex = 50
@@ -250,7 +250,7 @@ Partial Class viewPatientInfo
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(274, 92)
+        Me.Label1.Location = New System.Drawing.Point(277, 92)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 17)
         Me.Label1.TabIndex = 49
@@ -631,21 +631,21 @@ Partial Class viewPatientInfo
         '
         'txtBox_LastName
         '
-        Me.txtBox_LastName.Location = New System.Drawing.Point(277, 109)
+        Me.txtBox_LastName.Location = New System.Drawing.Point(280, 109)
         Me.txtBox_LastName.Name = "txtBox_LastName"
-        Me.txtBox_LastName.Size = New System.Drawing.Size(100, 20)
+        Me.txtBox_LastName.Size = New System.Drawing.Size(114, 20)
         Me.txtBox_LastName.TabIndex = 117
         '
         'txtBox_FirstName
         '
-        Me.txtBox_FirstName.Location = New System.Drawing.Point(388, 109)
+        Me.txtBox_FirstName.Location = New System.Drawing.Point(403, 109)
         Me.txtBox_FirstName.Name = "txtBox_FirstName"
-        Me.txtBox_FirstName.Size = New System.Drawing.Size(166, 20)
+        Me.txtBox_FirstName.Size = New System.Drawing.Size(155, 20)
         Me.txtBox_FirstName.TabIndex = 118
         '
         'txtBox_Sex
         '
-        Me.txtBox_Sex.Location = New System.Drawing.Point(560, 109)
+        Me.txtBox_Sex.Location = New System.Drawing.Point(564, 109)
         Me.txtBox_Sex.Name = "txtBox_Sex"
         Me.txtBox_Sex.Size = New System.Drawing.Size(68, 20)
         Me.txtBox_Sex.TabIndex = 119

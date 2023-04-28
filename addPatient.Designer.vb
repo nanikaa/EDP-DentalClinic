@@ -24,8 +24,8 @@ Partial Class addPatient
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(addPatient))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtbox_LName = New System.Windows.Forms.TextBox()
+        Me.txtbox_FName = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -100,19 +100,19 @@ Partial Class addPatient
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'TextBox1
+        'txtbox_LName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(275, 111)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(102, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.txtbox_LName.Location = New System.Drawing.Point(275, 111)
+        Me.txtbox_LName.Name = "txtbox_LName"
+        Me.txtbox_LName.Size = New System.Drawing.Size(102, 20)
+        Me.txtbox_LName.TabIndex = 1
         '
-        'TextBox2
+        'txtbox_FName
         '
-        Me.TextBox2.Location = New System.Drawing.Point(383, 111)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(205, 20)
-        Me.TextBox2.TabIndex = 2
+        Me.txtbox_FName.Location = New System.Drawing.Point(383, 111)
+        Me.txtbox_FName.Name = "txtbox_FName"
+        Me.txtbox_FName.Size = New System.Drawing.Size(205, 20)
+        Me.txtbox_FName.TabIndex = 2
         '
         'TextBox3
         '
@@ -755,8 +755,8 @@ Partial Class addPatient
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtbox_FName)
+        Me.Controls.Add(Me.txtbox_LName)
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -773,8 +773,8 @@ Partial Class addPatient
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtbox_LName As TextBox
+    Friend WithEvents txtbox_FName As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label

@@ -24,7 +24,7 @@ Public Class searchPatient
             Dim myreader As MySqlDataReader
 
 
-            strSQL = "Select patient_id, patient_firstName, patient_lastName from patients where patient_id = '" _
+            strSQL = "Select patient_id, patient_lastName, patient_firstName from patients where patient_id = '" _
                     & .txtBox_PatientID.Text & "'"
             'MsgBox(strSQL)
             mycmd.CommandText = strSQL
@@ -33,8 +33,8 @@ Public Class searchPatient
             If myreader.HasRows Then
                 While myreader.Read()
                     .txtBox_PatientID.Text = myreader.GetString(0)
-                    .txtBox_PatientFName.Text = myreader.GetString(1)
-                    .txtBox_PatientLName.Text = myreader.GetString(2)
+                    .label_FName.Text = myreader.GetString(1)
+                    .label_LName.Text = myreader.GetString(2)
                 End While
                 MessageBox.Show("Patient Record Exists!", "Happi Tooth | Search Patient ", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else

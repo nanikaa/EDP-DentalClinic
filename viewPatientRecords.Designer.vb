@@ -25,25 +25,22 @@ Partial Class viewPatientRecords
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(viewPatientRecords))
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.txtbox_Balance = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.label_patientID = New System.Windows.Forms.Label()
+        Me.btn_updateBal = New System.Windows.Forms.Button()
+        Me.grdData = New System.Windows.Forms.DataGridView()
+        Me.btn_Print = New System.Windows.Forms.Button()
+        Me.label_LName = New System.Windows.Forms.Label()
+        Me.label_FName = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grdData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -67,20 +64,6 @@ Partial Class viewPatientRecords
         Me.Label1.Size = New System.Drawing.Size(58, 17)
         Me.Label1.TabIndex = 77
         Me.Label1.Text = "Last Name"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(308, 114)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(223, 20)
-        Me.TextBox2.TabIndex = 74
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(186, 114)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(116, 20)
-        Me.TextBox1.TabIndex = 73
         '
         'Label2
         '
@@ -115,38 +98,12 @@ Partial Class viewPatientRecords
         Me.Label25.TabIndex = 112
         Me.Label25.Text = "Patient ID Number:"
         '
-        'TextBox19
+        'txtbox_Balance
         '
-        Me.TextBox19.Location = New System.Drawing.Point(701, 57)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.Size = New System.Drawing.Size(123, 20)
-        Me.TextBox19.TabIndex = 111
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(643, 90)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(181, 20)
-        Me.TextBox3.TabIndex = 113
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.TableLayoutPanel1.ColumnCount = 6
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.29126!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.70874!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160.0!))
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(58, 249)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.14286!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.85714!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(767, 35)
-        Me.TableLayoutPanel1.TabIndex = 115
+        Me.txtbox_Balance.Location = New System.Drawing.Point(643, 90)
+        Me.txtbox_Balance.Name = "txtbox_Balance"
+        Me.txtbox_Balance.Size = New System.Drawing.Size(125, 20)
+        Me.txtbox_Balance.TabIndex = 113
         '
         'Label14
         '
@@ -169,72 +126,6 @@ Partial Class viewPatientRecords
         Me.PictureBox2.TabIndex = 116
         Me.PictureBox2.TabStop = False
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(82, 229)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(33, 17)
-        Me.Label5.TabIndex = 118
-        Me.Label5.Text = "Date "
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(183, 229)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(45, 17)
-        Me.Label6.TabIndex = 119
-        Me.Label6.Text = "Service"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(310, 229)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(43, 17)
-        Me.Label8.TabIndex = 120
-        Me.Label8.Text = "Dentist"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(532, 229)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(78, 17)
-        Me.Label9.TabIndex = 123
-        Me.Label9.Text = "Amount Payed"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(436, 229)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(72, 17)
-        Me.Label10.TabIndex = 122
-        Me.Label10.Text = "Total Amount"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(696, 229)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(51, 17)
-        Me.Label11.TabIndex = 124
-        Me.Label11.Text = "Remarks"
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -246,30 +137,99 @@ Partial Class viewPatientRecords
         Me.Label7.TabIndex = 125
         Me.Label7.Text = "Balance:"
         '
+        'label_patientID
+        '
+        Me.label_patientID.AutoSize = True
+        Me.label_patientID.BackColor = System.Drawing.Color.Transparent
+        Me.label_patientID.Font = New System.Drawing.Font("Cascadia Mono", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_patientID.ForeColor = System.Drawing.Color.HotPink
+        Me.label_patientID.Location = New System.Drawing.Point(694, 50)
+        Me.label_patientID.Name = "label_patientID"
+        Me.label_patientID.Size = New System.Drawing.Size(60, 28)
+        Me.label_patientID.TabIndex = 126
+        Me.label_patientID.Text = "0000"
+        '
+        'btn_updateBal
+        '
+        Me.btn_updateBal.Location = New System.Drawing.Point(774, 87)
+        Me.btn_updateBal.Name = "btn_updateBal"
+        Me.btn_updateBal.Size = New System.Drawing.Size(51, 23)
+        Me.btn_updateBal.TabIndex = 127
+        Me.btn_updateBal.Text = "Update"
+        Me.btn_updateBal.UseVisualStyleBackColor = True
+        '
+        'grdData
+        '
+        Me.grdData.AllowUserToAddRows = False
+        Me.grdData.AllowUserToDeleteRows = False
+        Me.grdData.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.grdData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        Me.grdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grdData.Location = New System.Drawing.Point(56, 215)
+        Me.grdData.MaximumSize = New System.Drawing.Size(769, 150)
+        Me.grdData.MinimumSize = New System.Drawing.Size(769, 150)
+        Me.grdData.Name = "grdData"
+        Me.grdData.ReadOnly = True
+        Me.grdData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.grdData.Size = New System.Drawing.Size(769, 150)
+        Me.grdData.TabIndex = 128
+        '
+        'btn_Print
+        '
+        Me.btn_Print.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.btn_Print.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_Print.Font = New System.Drawing.Font("Franklin Gothic Demi Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_Print.Location = New System.Drawing.Point(392, 435)
+        Me.btn_Print.Name = "btn_Print"
+        Me.btn_Print.Size = New System.Drawing.Size(86, 31)
+        Me.btn_Print.TabIndex = 129
+        Me.btn_Print.Text = "Print"
+        Me.btn_Print.UseVisualStyleBackColor = False
+        '
+        'label_LName
+        '
+        Me.label_LName.AutoSize = True
+        Me.label_LName.BackColor = System.Drawing.Color.Transparent
+        Me.label_LName.Font = New System.Drawing.Font("Cascadia Mono", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_LName.ForeColor = System.Drawing.Color.Black
+        Me.label_LName.Location = New System.Drawing.Point(188, 111)
+        Me.label_LName.Name = "label_LName"
+        Me.label_LName.Size = New System.Drawing.Size(60, 28)
+        Me.label_LName.TabIndex = 130
+        Me.label_LName.Text = "0000"
+        '
+        'label_FName
+        '
+        Me.label_FName.AutoSize = True
+        Me.label_FName.BackColor = System.Drawing.Color.Transparent
+        Me.label_FName.Font = New System.Drawing.Font("Cascadia Mono", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_FName.ForeColor = System.Drawing.Color.Black
+        Me.label_FName.Location = New System.Drawing.Point(313, 111)
+        Me.label_FName.Name = "label_FName"
+        Me.label_FName.Size = New System.Drawing.Size(60, 28)
+        Me.label_FName.TabIndex = 131
+        Me.label_FName.Text = "0000"
+        '
         'viewPatientRecords
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(891, 450)
+        Me.ClientSize = New System.Drawing.Size(891, 487)
+        Me.Controls.Add(Me.label_FName)
+        Me.Controls.Add(Me.label_LName)
+        Me.Controls.Add(Me.btn_Print)
+        Me.Controls.Add(Me.grdData)
+        Me.Controls.Add(Me.btn_updateBal)
+        Me.Controls.Add(Me.label_patientID)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtbox_Balance)
         Me.Controls.Add(Me.Label25)
-        Me.Controls.Add(Me.TextBox19)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
@@ -280,27 +240,24 @@ Partial Class viewPatientRecords
         Me.Text = "Happi Tooth | Patient Records"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grdData, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label25 As Label
-    Friend WithEvents TextBox19 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents txtbox_Balance As TextBox
     Friend WithEvents Label14 As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents label_patientID As Label
+    Friend WithEvents btn_updateBal As Button
+    Friend WithEvents grdData As DataGridView
+    Friend WithEvents btn_Print As Button
+    Friend WithEvents label_LName As Label
+    Friend WithEvents label_FName As Label
 End Class
